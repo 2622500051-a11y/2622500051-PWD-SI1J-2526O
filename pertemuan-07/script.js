@@ -70,6 +70,7 @@ contactForm.addEventListener("submit", (event) => {
   }
   formFeedback.textContent = "Form berhasil divalidasi.";
   formFeedback.className = "form-feedback-success";
+  contactForm.submit();
 });
 contactForm.addEventListener("reset", () => {
   formFeedback.textContent = "";
