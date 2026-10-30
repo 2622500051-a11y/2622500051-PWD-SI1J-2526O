@@ -185,7 +185,7 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
           href="https://github.com/2622500051-a11y">profil GitHub saya</a>.
         </p>
 
-        <form id="contactForm" action="index.php" method="get" novalidate>
+        <form id="contactForm" action="index.php" method="post" novalidate>
           <div class="form-group">
             <label for="nama">Nama Lengkap</label>
             <input
