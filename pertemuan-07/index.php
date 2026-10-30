@@ -1,5 +1,5 @@
 <?php
-// P7: penggunaan GET
+// P7: penggunaan post
 if (isset($_GET['nama'])) {
   $nama = $_GET['nama'];
   echo "Nama yang diterima: " . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
