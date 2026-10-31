@@ -243,13 +243,18 @@ $teksStatus = $statusAktif ? "Aktif" : "Tidak aktif";
       <section id="contact">
         <h2>Kontak</h2>
 
-        <p>
-          Kunjungi
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-          href="https://github.com/2622500051-a11y">profil GitHub saya</a>.
-        </p>
+<?php if ($pesanKesalahan !== ''): ?>
+  <p class="form-feedback-error">
+    <?= htmlspecialchars($pesanKesalahan, ENT_QUOTES, 'UTF-8') ?>
+  </p>
+<?php endif; ?>
+<p>
+  Kunjungi
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://github.com/2622500051-a11y">profil GitHub saya</a>.
+</p>
 
         <form id="contactForm" action="index.php" method="post" novalidate>
           <div class="form-group">
