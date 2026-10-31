@@ -149,7 +149,7 @@ $prodi = $_SESSION['prodi'] ?? '';
 $minat = $_SESSION['minat'] ?? '';
 $pesan = $_SESSION['pesan'] ?? '';
 ?>
-<!doctype html>S
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
