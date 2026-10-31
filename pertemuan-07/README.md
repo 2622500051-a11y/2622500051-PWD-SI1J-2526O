@@ -1,8 +1,8 @@
 # Pertemuan 7 - Pemrosesan Formulir dengan PHP, Validasi Sisi Peladen, dan PRG
 
-Mata Kuliah : Pemrograman Web Dasar (IS205)
-Nama / NIM  : Serin Ariestia Rafka / 2622500051
-Repositori  : https://github.com/2622500051-a11y/2622500051-PWD-SI1J-2526O
+- Mata Kuliah : Pemrograman Web Dasar (IS205)
+- Nama / NIM  : Serin Ariestia Rafka / 2622500051
+- Repositori  : https://github.com/2622500051-a11y/2622500051-PWD-SI1J-2526O
 
 > Hasil pada dokumen ini dicatat sesuai pengujian yang dilakukan.
 
