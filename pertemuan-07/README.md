@@ -17,7 +17,7 @@
 
 ```
 pertemuan-07/
-├── index.php        (formulir utama: POST, validasi, keluaran aman)
+├── index.php        (formulir utama: POST, validasi, keluaran aman, session, PRG)
 ├── indexGet.php     (artefak demonstrasi GET)
 ├── style.css
 ├── script.js
@@ -58,7 +58,7 @@ Perubahan: menambahkan `contactForm.submit();` di dalam handler `submit` pada `s
 | No | Pengujian | Hasil |
 |----|-----------|-------|
 | 1 | Isi seluruh kolom dengan data valid lalu klik Kirim | URL berisi parameter (`?nama=Serin+Ariestia+Rafka&email=...&semester=1&tanggal=...`) dan halaman menampilkan "Nama yang diterima: Serin Ariestia Rafka" |
-| 2 | Kosongkan atau isi tidak valid salah satu kolom wajib | (isi hasil uji) |
+| 2 | Kolom semester diisi teks `1-14` (bukan angka) | Muncul pesan merah "Semester harus diisi dengan angka 1 sampai 14." dan formulir tidak terkirim |
 
 Catatan: pesan "Form berhasil divalidasi." tidak sempat terlihat karena halaman langsung dimuat ulang setelah formulir dikirim. Pada tahap ini PHP hanya membaca parameter `nama`.
 
@@ -117,12 +117,23 @@ Pengujian dilakukan dengan `script.js` dinonaktifkan sementara (dikomentari), la
 
 | No | Pengujian | Hasil |
 |----|-----------|-------|
-| 1 | Kirim data valid, bagian "Data yang Diterima Peladen" tampil di bawah formulir | (isi hasil uji) |
+| 1 | Kirim data valid, bagian "Data yang Diterima Peladen" tampil di bawah formulir | Tampil: nama, email, semester, tanggal kunjungan, jenis pesan, program studi, daftar minat (HTML, CSS), dan pesan |
 | 2 | Isi kolom pesan dengan `<b>Mahasiswa</b>`, tampil sebagai teks biasa (bukan huruf tebal) | (isi hasil uji) |
 
 ## G. Session dan Pola PRG
 
-(belum dikerjakan)
+Perubahan pada `index.php`:
+
+- Menambahkan `session_start();` di baris paling atas, tepat setelah `<?php`.
+- Menambahkan blok PRG sebelum `?>` yang mendahului `<!doctype html>`: pada permintaan POST, pesan kesalahan dan data formulir disimpan ke `$_SESSION`, lalu `header('Location: index.php'); exit;`.
+- Setelah redirect, data dibaca kembali dari `$_SESSION` (`$_SESSION['pesanKesalahan']`, `nama`, `email`, `semester`, `tanggal`, `jenis_pesan`, `prodi`, `minat`, `pesan`).
+- Pesan kesalahan dihapus dengan `unset($_SESSION['pesanKesalahan'])` setelah ditampilkan (flash message).
+- Kondisi tampilan "Data yang Diterima Peladen" diubah dari `$_SERVER['REQUEST_METHOD'] === 'POST'` menjadi `!empty($nama)`.
+
+| No | Pengujian | Hasil |
+|----|-----------|-------|
+| 1 | Isi semua kolom dengan data valid lalu klik Kirim | Halaman kembali ke `index.php`, kolom formulir kosong kembali, dan bagian "Data yang Diterima Peladen" menampilkan data yang dikirim |
+| 2 | Muat ulang halaman (CTRL+SHIFT+R) setelah pengiriman | (isi hasil uji) |
 
 ## Kendala dan Perbaikan
 
@@ -132,7 +143,8 @@ Pengujian dilakukan dengan `script.js` dinonaktifkan sementara (dikomentari), la
 - Perubahan `method="post"` dan `$_POST` belum terbaca di browser pada percobaan awal karena file belum tersimpan dan halaman masih memakai tampilan lama. Diperbaiki dengan menyimpan file (Ctrl+S) dan hard reload (Ctrl+Shift+R).
 - Pembacaan input pada E.4 sempat berada di dalam blok `if (isset($_POST['nama']))`. Dipindahkan ke luar blok agar variabel selalu tersedia.
 - Blok pesan kesalahan sempat menghapus tag `<p>` pembuka pada paragraf "Kunjungi profil GitHub saya". Diperbaiki dengan menambahkan kembali `<p>`.
+- Pada bagian G, kode sempat tertempel ganda (`<?php`, `session_start`, `<!doctype html>`, dan baris `$teksStatus` terduplikasi) serta ada huruf nyasar. Semua duplikat dan huruf nyasar dihapus sehingga hanya ada satu `<?php`, satu `session_start();`, dan satu `<!doctype html>`.
 
 ## Kesimpulan
 
-(isi di akhir setelah seluruh tahap selesai)
+Pada pertemuan ini saya mempelajari alur pemrosesan formulir dengan PHP, mulai dari pengiriman data lewat GET dan POST, pembacaan data dengan `$_GET` dan `$_POST`, hingga validasi di sisi peladen (kelengkapan, format, dan nilai pilihan). Saya juga memahami bahwa validasi JavaScript tidak cukup karena dapat dilewati, sehingga PHP tetap perlu memeriksa data. Keluaran HTML diamankan dengan `htmlspecialchars()` agar masukan pengguna tidak ditafsirkan sebagai markup. Terakhir, session dan pola Post-Redirect-Get (PRG) digunakan agar data tetap tampil setelah pengalihan dan halaman tidak meminta pengiriman ulang formulir ketika dimuat ulang.
