@@ -8,8 +8,8 @@ h1,h2,h3{font-family:"Bitter",Georgia,serif;line-height:1.25}
 header{display:flex;align-items:center;gap:16px;padding:18px 24px;background:var(--laut);color:var(--putih);border-bottom:2px solid var(--garis)}
 header h1{font-size:1.7rem}
 header p{font-size:.95rem;color:#b9d3df}
-.flame{width:48px;height:56px;transform-origin:50% 100%;animation:api 1.4s ease-in-out infinite alternate}
-@keyframes api{from{transform:scale(1,.93) rotate(-2deg)}to{transform:scale(.96,1.05) rotate(2deg)}}
+.logo{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--bara);background:#cfdde3;animation:denyut 2s ease-out infinite}
+@keyframes denyut{from{box-shadow:0 0 0 0 rgba(240,100,30,.6)}to{box-shadow:0 0 0 14px rgba(240,100,30,0)}}
 
 /* TENGAH: NAVIGASI + KONTEN */
 .tengah{display:flex;min-height:480px}
@@ -65,4 +65,4 @@ footer{text-align:center;padding:12px;border-top:2px solid var(--garis);backgrou
   nav a:hover,nav a.aktif{border-left:none;border-bottom-color:var(--bara)}
   main{padding:20px 16px}
 }
-@media (prefers-reduced-motion:reduce){.flame{animation:none}}
+@media (prefers-reduced-motion:reduce){.logo{animation:none}}
