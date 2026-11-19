@@ -50,6 +50,8 @@ pembelajaran, bukan bentuk normalisasi basis data yang ideal.
 | Ekspor SQL (Quick, format SQL) | Berhasil, berkas `db_pwd_2622500051.sql` ada di folder pertemuan-10 |
 | Pemeriksaan berkas SQL | CREATE TABLE dan INSERT INTO tercantum, sesuai dengan tampilan Browse |
 | Aplikasi dibuka di localhost | Berhasil, halaman tampil di http://localhost:8000/index.php lengkap dengan foto, gaya CSS, dan script.js (PHP 8.1.10) |
+| Formulir Kontak | Berhasil: formulir kosong menampilkan pesan kesalahan berwarna merah; setelah diisi lengkap, data tampil di bawah formulir dan tetap tampil setelah di-refresh; pengiriman berikutnya menggantikan data sebelumnya (disimpan di session, belum ke MySQL) |
+| Git status | Folder `mysql-8` tidak lagi muncul setelah ditambahkan ke `.gitignore` |
 
 ## Temuan dan Perbaikan
 - Nama tabel sempat salah ketik (`tbl_kotak`), diperbaiki menjadi `tbl_kontak`.
