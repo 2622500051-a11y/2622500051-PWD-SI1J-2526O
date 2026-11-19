@@ -24,12 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kotak_2622500051`
+-- Table structure for table `tbl_kontak_2622500051`
 --
 
-CREATE TABLE `tbl_kotak_2622500051` (
+CREATE TABLE `tbl_kontak_2622500051` (
   `id` int NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `email` varchar(255) NOT NULL,
   `semester` tinyint NOT NULL,
   `tanggal` date NOT NULL,
@@ -40,10 +40,10 @@ CREATE TABLE `tbl_kotak_2622500051` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `tbl_kotak_2622500051`
+-- Dumping data for table `tbl_kontak_2622500051`
 --
 
-INSERT INTO `tbl_kotak_2622500051` (`id`, `name`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`) VALUES
+INSERT INTO `tbl_kontak_2622500051` (`id`, `name`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`) VALUES
 (1, 'Serin Ariestia Rafka', 'hello123iloveu@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'i love u and i miss u'),
 (2, 'Serin Ariestia Rafka', 'iloveu123@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'cihuy'),
 (3, 'rafkaariestia', 'rafka227788@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'huem'),
@@ -55,9 +55,9 @@ INSERT INTO `tbl_kotak_2622500051` (`id`, `name`, `email`, `semester`, `tanggal`
 --
 
 --
--- Indexes for table `tbl_kotak_2622500051`
+-- Indexes for table `tbl_kontak_2622500051`
 --
-ALTER TABLE `tbl_kotak_2622500051`
+ALTER TABLE `tbl_kontak_2622500051`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -65,9 +65,9 @@ ALTER TABLE `tbl_kotak_2622500051`
 --
 
 --
--- AUTO_INCREMENT for table `tbl_kotak_2622500051`
+-- AUTO_INCREMENT for table `tbl_kontak_2622500051`
 --
-ALTER TABLE `tbl_kotak_2622500051`
+ALTER TABLE `tbl_kontak_2622500051`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
