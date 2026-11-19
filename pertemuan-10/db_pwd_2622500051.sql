@@ -43,12 +43,12 @@ CREATE TABLE `tbl_kontak_2622500051` (
 -- Dumping data for table `tbl_kontak_2622500051`
 --
 
-INSERT INTO `tbl_kontak_2622500051` (`id`, `name`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`) VALUES
-(1, 'Serin Ariestia Rafka', 'hello123iloveu@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'i love u and i miss u'),
-(2, 'Serin Ariestia Rafka', 'iloveu123@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'cihuy'),
-(3, 'rafkaariestia', 'rafka227788@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'huem'),
-(4, 'sensen', 'sensen2445@gmail.com', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'ahaay'),
-(5, 'kitabahagia', 'kitawajibbahagia@gmail.com2', 1, '2026-11-16', 'saran', 'HTML CSS', 'SI', 'gokil');
+INSERT INTO `tbl_kontak_2622500051` (`id`, `nama`, `email`, `semester`, `tanggal`, `jenis_pesan`, `minat`, `prodi`, `pesan`) VALUES
+(1, 'Serin Ariestia Rafka', 'hello123iloveu@gmail.com', 1, '2026-11-16', 'saran', 'HTML, CSS', 'SI', 'i love u and i miss u'),
+(2, 'Serin Ariestia Rafka', 'iloveu123@gmail.com', 1, '2026-11-16', 'saran', 'HTML, CSS', 'SI', 'cihuy'),
+(3, 'rafkaariestia', 'rafka227788@gmail.com', 1, '2026-11-16', 'saran', 'HTML, CSS', 'SI', 'huem'),
+(4, 'sensen', 'sensen2445@gmail.com', 1, '2026-11-16', 'saran', 'HTML, CSS', 'SI', 'ahaay'),
+(5, 'kitabahagia', 'kitawajibbahagia@gmail.com', 1, '2026-11-16', 'saran', 'HTML, CSS', 'SI', 'gokil');
 
 --
 -- Indexes for dumped tables
