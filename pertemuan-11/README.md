@@ -17,3 +17,11 @@
 - Struktur: 9 kolom (id, nama, email, semester, tanggal, jenis_pesan, minat, prodi, pesan).
 - Tab Browse menampilkan (jumlah) baris data.
 - Catatan: impor pertama gagal (#1046 No database selected) karena dijalankan dari tingkat server. Impor berhasil setelah dijalankan dari dalam database db_pwd_2622500051.
+
+## D. Berkas Koneksi PHP-MySQL
+- Dibuat koneksi.php berisi parameter (host localhost, user root, password kosong, database db_pwd_2622500051), mysqli_report(MYSQLI_REPORT_OFF), mysqli_connect(), dan pemeriksaan if (!$koneksi) dengan die().
+
+### D.5 Uji keberhasilan koneksi
+- Dibuat berkas sementara uji_koneksi.php.
+- Alamat uji: http://localhost/pwd/2622500051-PWD-SI1J-2526O/pertemuan-11/uji_koneksi.php
+- Hasil: halaman menampilkan "Koneksi ke basis data berhasil."
