@@ -30,3 +30,8 @@
 - $database diubah sementara menjadi db_tidak_tersedia.
 - Hasil: tampil Warning "Unknown database" dan pesan "Koneksi ke basis data gagal."
 - $database dikembalikan ke db_pwd_2622500051; pesan berhasil muncul kembali.
+
+### D.7 Penutup tahap koneksi
+- Berkas sementara uji_koneksi.php dihapus.
+- koneksi.php diperiksa: parameter database kembali ke db_pwd_2622500051 dan kode akhir sudah benar.
+- Berkas index.html yang tidak termasuk struktur P11 dihapus agar alamat pertemuan-11 menampilkan index.php.
