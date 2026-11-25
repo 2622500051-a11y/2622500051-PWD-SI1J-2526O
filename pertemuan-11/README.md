@@ -53,3 +53,10 @@
 - Hasil mysqli_fetch_assoc() disimpan ke larik $dataKontak.
 - Hasil var_dump: (jumlah) elemen, setiap elemen memiliki 9 indeks sesuai nama kolom.
 - var_dump dikembalikan menjadi komentar setelah pemeriksaan.
+
+## H. Ekspor Basis Data
+- Database db_pwd_2622500051 diekspor melalui phpMyAdmin (Quick, SQL).
+- Hasil ekspor menimpa pertemuan-11/db_pwd_2622500051.sql dan berisi CREATE TABLE serta INSERT INTO (5 baris data).
+
+### D.7 Penutup tahap koneksi
+- uji_koneksi.php dihapus; koneksi.php berisi kode akhir yang benar.
