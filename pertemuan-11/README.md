@@ -39,3 +39,7 @@
 ## E. Integrasi Koneksi ke Halaman Utama
 - index.php memuat fungsi.php dan koneksi.php menggunakan require_once().
 - session_start() dimatikan (diberi komentar) pada P11.
+
+## E. Integrasi Koneksi ke Halaman Utama
+- index.php memuat fungsi.php dan koneksi.php dengan require_once(); session_start() dimatikan.
+- Hasil uji: halaman utama tampil tanpa pesan "Koneksi ke basis data gagal."
