@@ -48,3 +48,8 @@
 - Kueri: SELECT * FROM tbl_kontak_2622500051, dijalankan dengan mysqli_query(), hasil diambil dengan mysqli_fetch_assoc() ke larik $dataKontak.
 - Uji kueri gagal: nama tabel diubah sementara menjadi tbl_tabel_tidak_tersedia; tampil "Kueri SELECT gagal dijalankan." Nama tabel sudah dikembalikan.
 - Pengamatan var_dump($dataKontak): (tulis jumlah baris dan indeks kolom yang Anda lihat).
+
+### F.5-F.6 Pengambilan dan pemeriksaan data
+- Hasil mysqli_fetch_assoc() disimpan ke larik $dataKontak.
+- Hasil var_dump: (jumlah) elemen, setiap elemen memiliki 9 indeks sesuai nama kolom.
+- var_dump dikembalikan menjadi komentar setelah pemeriksaan.
