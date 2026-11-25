@@ -43,3 +43,8 @@
 ## E. Integrasi Koneksi ke Halaman Utama
 - index.php memuat fungsi.php dan koneksi.php dengan require_once(); session_start() dimatikan.
 - Hasil uji: halaman utama tampil tanpa pesan "Koneksi ke basis data gagal."
+
+## F. Operasi READ
+- Kueri: SELECT * FROM tbl_kontak_2622500051, dijalankan dengan mysqli_query(), hasil diambil dengan mysqli_fetch_assoc() ke larik $dataKontak.
+- Uji kueri gagal: nama tabel diubah sementara menjadi tbl_tabel_tidak_tersedia; tampil "Kueri SELECT gagal dijalankan." Nama tabel sudah dikembalikan.
+- Pengamatan var_dump($dataKontak): (tulis jumlah baris dan indeks kolom yang Anda lihat).
