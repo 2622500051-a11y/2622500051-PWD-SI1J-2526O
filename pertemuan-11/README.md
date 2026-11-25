@@ -60,3 +60,7 @@
 
 ### D.7 Penutup tahap koneksi
 - uji_koneksi.php dihapus; koneksi.php berisi kode akhir yang benar.
+
+## G. Menampilkan Data dari Basis Data
+- Uji tabel kosong: tabel dikosongkan dengan TRUNCATE; tampil "Belum ada data kontak yang tersimpan."
+- Data dikembalikan lewat perintah INSERT di tab SQL; kelima data tampil kembali.
