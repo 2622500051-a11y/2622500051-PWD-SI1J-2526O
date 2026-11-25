@@ -35,3 +35,7 @@
 - Berkas sementara uji_koneksi.php dihapus.
 - koneksi.php diperiksa: parameter database kembali ke db_pwd_2622500051 dan kode akhir sudah benar.
 - Berkas index.html yang tidak termasuk struktur P11 dihapus agar alamat pertemuan-11 menampilkan index.php.
+
+## E. Integrasi Koneksi ke Halaman Utama
+- index.php memuat fungsi.php dan koneksi.php menggunakan require_once().
+- session_start() dimatikan (diberi komentar) pada P11.
