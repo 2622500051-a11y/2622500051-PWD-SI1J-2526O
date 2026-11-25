@@ -25,3 +25,8 @@
 - Dibuat berkas sementara uji_koneksi.php.
 - Alamat uji: http://localhost/pwd/2622500051-PWD-SI1J-2526O/pertemuan-11/uji_koneksi.php
 - Hasil: halaman menampilkan "Koneksi ke basis data berhasil."
+
+### D.6 Uji kegagalan koneksi
+- $database diubah sementara menjadi db_tidak_tersedia.
+- Hasil: tampil Warning "Unknown database" dan pesan "Koneksi ke basis data gagal."
+- $database dikembalikan ke db_pwd_2622500051; pesan berhasil muncul kembali.
